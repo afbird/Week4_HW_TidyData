@@ -78,7 +78,7 @@ names(df_activity_labels) <- c("activity_id", "activity_label")
 ##    change vector to integer 
 ##    change vector to data frame
 ## rename activity performed column for merge
-## merge train activities with activity labels using dplyr::inner_join
+## merge train activities with activity labels
 
 df_ytrain <- readLines("./train/Y_train.txt") %>% as.integer() %>% as.data.frame()
 names(df_ytrain) <- c("activity_done")
@@ -91,7 +91,7 @@ df_ytrain_labels <- inner_join(df_ytrain, df_activity_labels, by = c("activity_d
 ##    change vector to integer 
 ##    change vector to data frame
 ## rename activity performed column for merge
-## merge test activities with activity labels using dplyr::inner_join
+## merge test activities with activity labels
 
 df_ytest <- readLines("./test/Y_test.txt") %>% as.integer() %>% as.data.frame()
 names(df_ytest) <- c("activity_done")
@@ -103,7 +103,6 @@ df_ytraintest <- bind_rows(df_ytrain, df_ytest)
 ## STEP 3.4 - APPEND TRAIN AND TEST PERFORMED ACTIVITIES DATA FRAMES INTO SINGLE DATA FRAME
 
 ## append test activities to train activities 
-## add column to data frame df_traintest_labels with row number for merging with data
 
 list_traintest_labels <- bind_rows(as.list(df_ytrain_labels), as.list(df_ytest_labels))
 
