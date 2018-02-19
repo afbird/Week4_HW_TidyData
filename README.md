@@ -1,7 +1,14 @@
 # Week4_HW_TidyData
 Coursera Week 4_HomeWork - TidyData
 
-This file describes the goals of the homework and the data cleansing steps taken to meet the goals
+This file describes the files, goals of the homework and the data cleansing steps taken to meet the goals
+
+Submitted File 1: run_analysis.R - Script file containing code described below
+
+Submitted File 2: train_test_mean_std_with_labels.csv - file containing tidy data with subject no, activity no, activity labels, and means and standrard deviations of the collected data
+
+Submitted File 3: train_test_aggregated_means.csv - file containing aggregation results of means of collected data values summarized by subject number and activity number
+
 
 Homework Goals:
 
