@@ -21,6 +21,7 @@ subject_train.txt - training data regrading subject number for each observation 
 subject_test.txt - test data regrading subject number for each observation made
 
 
+
 HIGH-LEVEL DESCRIPTION OF CLEANING OF THE RAW DATA:
 
 Data cleansing consisted of loading data into R in the appropriate formats and linking the raw data qith the factors that identified the source of the information. In cleansing, training and test files for data, activities and subjects were merged. The names of the attributes collected were applied to each variable and the names of the activities performed were also applied to each observation record. The desired attributes, consisting of means and standard deviations, were extracted and saved to a physical file after all steps had been taken. After the initial data file was prepared, a summary file of average values by attributes for each subject and activity was prepared and saved.
@@ -53,6 +54,7 @@ The solution steps sequence followed in the R Script were as follows:
 11. Merge activity labels and subject numbers with data and save file to disk
 
 12. Generate aggregation with averages by subject_no and activity_id and save file to disk
+
 
 
 DIMENSIONS AND SUMMARY OF THE DATA IN THE RAW DATA AND OUTPUT DATA SETS: 
