@@ -2,9 +2,7 @@ Coursera Week 4 Data Preparation and Summarization Project
 
 This project consists of downloading raw data gathered by researchers and cleaning and reorganizing it in a way that it can be used for analysis
 
-##Study design and data processing
-
-###Collection of the raw data Description of how the data was collected.
+RAW DATA DESCRIPTION:
 
 x_train.txt - Collected data used for machine learning traning purposes
 
@@ -23,16 +21,12 @@ subject_train.txt - training data regrading subject number for each observation 
 subject_test.txt - test data regrading subject number for each observation made
 
 
+HIGH-LEVEL DESCRIPTION OF CLEANING OF THE RAW DATA:
 
-###Notes on the original (raw) data Some additional notes (if avaialble, otherwise you can leave this section out).
+Data cleansing consisted of loading data into R in the appropriate formats and linking the raw data qith the factors that identified the source of the information. In cleansing, training and test files for data, activities and subjects were merged. The names of the attributes collected were applied to each variable and the names of the activities performed were also applied to each observation record. The desired attributes, consisting of means and standard deviations, were extracted and saved to a physical file after all steps had been taken. After the initial data file was prepared, a summary file of average values by attributes for each subject and activity was prepared and saved.
 
-##Creating the tidy datafile
 
-###Guide to create the tidy data file Description on how to create the tidy data file (1. download the data, ...)/
-
-###Cleaning of the data Short, high-level description of what the cleaning script does. link to the readme document that describes the code in greater detail
-
-Data cleansing consisted of loading data into R in the appropriate formats and linking the raw data qith the factors that identified the source of the information. In cleansing, training and test files for data, activities and subjects were merged. The names of the attributes collected had to be applied to each variable and the names of the activities performed were also applied to each observation record. The desired attributes, consisting of means and standard deviations, were extracted and saved to a physical file after all steps had been taken. After the initial data file was prepared, a summary file of average values by attributes for each subject and activity was prepared and saved.
+STEPS FOLLOWED IN CREATION OF THE TIDY DATA SET AND THE SUMMARY DATA SET
 
 The solution steps sequence followed in the R Script were as follows:
 
@@ -61,13 +55,13 @@ The solution steps sequence followed in the R Script were as follows:
 12. Generate aggregation with averages by subject_no and activity_id and save file to disk
 
 
-##Description of the variables in the tiny_data.txt file General description of the file including:
+DIMENSIONS AND SUMMARY OF THE DATA IN THE RAW DATA AND OUTPUT DATA SETS: 
 
-Dimensions of the dataset
+Dimensions and summary of the data in the raw data set:
 
-  Data set consisted of 10299 observations with 561 attributes each
+  Raw data set consisted of 10299 observations with 561 attributes each
 
-Summary of the data - Variables present in the dataset - obtained from reference [1] below
+Summary of the data - Variables present in the raw dataset - obtained from reference [1] below
 
   - Triaxial acceleration from the accelerometer (total acceleration) and the estimated body acceleration.
 
@@ -79,7 +73,18 @@ Summary of the data - Variables present in the dataset - obtained from reference
 
   - An identifier of the subject who carried out the experiment.
 
-##Sources Sources you used if any, otherise leave out.
+
+Dimensions and summary of the data in the output data set:
+
+  Output data sets consisted of 10299 observations with 82 attributes each 
+ 
+Summary of the data - Variables present in the output datasets:
+
+  Attributes included the subject no, activity id and activity label for the 79 attributes of the original file 
+  that represented mean or standard deviation values.
+
+
+SOURCES USED:
 
 [1] Davide Anguita, Alessandro Ghio, Luca Oneto, Xavier Parra and Jorge L. Reyes-Ortiz. Human Activity Recognition on Smartphones using a Multiclass Hardware-Friendly Support Vector Machine. International Workshop of Ambient Assisted Living (IWAAL 2012). Vitoria-Gasteiz, Spain. Dec 2012
 
